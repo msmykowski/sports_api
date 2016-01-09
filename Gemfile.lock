@@ -176,6 +176,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   factory_girl_rails
   jbuilder (~> 2.0)
+  nokogiri
   rails (= 4.2.3)
   rest-client
   rspec-rails
