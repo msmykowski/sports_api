@@ -9,7 +9,7 @@ class EspnClient < ActiveRecord::Base
   end
 
   def get_player_stats(team_abbr, team_name )
-    RestClient.get "#{@url}/team/stats/_/name/#{team_abbr}/#{team_name}"
+    RestClient.get "#{@url}/teams/stats?team=#{team_abbr}"
   end
 
 end

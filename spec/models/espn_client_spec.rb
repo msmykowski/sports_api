@@ -15,9 +15,9 @@ RSpec.describe EspnClient, type: :model do
     end
 
     it 'makes a request to nba players page' do
-      stub_request(:get, "http://espn.go.com/nba/team/stats/_/name/#{team.abbr}/#{team.name}")
+      stub_request(:get, "http://espn.go.com/nba/teams/stats?team=#{team.abbr}")
       response = @client.get_player_stats(team.abbr, team.name)
-      expect(WebMock).to have_requested(:get ,"http://espn.go.com/nba/team/stats/_/name/#{team.abbr}/#{team.name}")
+      expect(WebMock).to have_requested(:get ,"http://espn.go.com/nba/teams/stats?team=#{team.abbr}")
     end
   end
 end
