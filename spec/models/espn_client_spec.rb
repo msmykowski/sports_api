@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe EspnClient, type: :model do
   context 'when getting NBA stats' do
+    let(:team) {FactoryGirl.create(:team)}
+
     before(:all) do
       @client = EspnClient.new('nba')
     end
@@ -13,9 +15,9 @@ RSpec.describe EspnClient, type: :model do
     end
 
     it 'makes a request to nba players page' do
-      stub_request(:get, "http://espn.go.com/nba/team/stats/_/name/ny/new-york-knicks")
-      response = @client.get_player_stats('ny', 'new-york-knicks')
-      expect(WebMock).to have_requested(:get ,"http://espn.go.com/nba/team/stats/_/name/ny/new-york-knicks")
+      stub_request(:get, "http://espn.go.com/nba/team/stats/_/name/#{team.abbr}/#{team.name}")
+      response = @client.get_player_stats(team.abbr, team.name)
+      expect(WebMock).to have_requested(:get ,"http://espn.go.com/nba/team/stats/_/name/#{team.abbr}/#{team.name}")
     end
   end
 end

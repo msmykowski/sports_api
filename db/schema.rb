@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160109230907) do
+ActiveRecord::Schema.define(version: 20160110220341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,40 @@ ActiveRecord::Schema.define(version: 20160109230907) do
   end
 
   create_table "espn_parsers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "gp"
+    t.integer  "gs"
+    t.integer  "min"
+    t.integer  "ppg"
+    t.integer  "offr"
+    t.integer  "defr"
+    t.integer  "rpg"
+    t.integer  "apg"
+    t.integer  "spg"
+    t.integer  "bpg"
+    t.integer  "tpg"
+    t.integer  "fpg"
+    t.integer  "ato"
+    t.integer  "per"
+    t.integer  "fgm"
+    t.integer  "fga"
+    t.integer  "fg"
+    t.integer  "thpm"
+    t.integer  "thpa"
+    t.integer  "thp"
+    t.integer  "ftm"
+    t.integer  "fta"
+    t.integer  "ft"
+    t.integer  "tpm"
+    t.integer  "tpa"
+    t.integer  "tp"
+    t.integer  "pps"
+    t.integer  "afg"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

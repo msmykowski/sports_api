@@ -21,4 +21,5 @@ group :test do
   gem 'rspec-rails'
   gem 'webmock'
   gem 'factory_girl_rails'
+  gem 'ffaker'
 end
