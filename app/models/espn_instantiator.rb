@@ -1,5 +1,4 @@
 class EspnInstantiator < ActiveRecord::Base
-
   def initialize(parser)
     @parser = parser
   end
