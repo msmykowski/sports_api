@@ -16,10 +16,10 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rubocop'
+  gem 'rspec-rails'
 end
 
 group :test do
-  gem 'rspec-rails'
   gem 'webmock'
   gem 'factory_girl_rails'
   gem 'ffaker'
