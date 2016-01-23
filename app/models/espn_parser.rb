@@ -21,7 +21,7 @@ class EspnParser < ActiveRecord::Base
     table_length = table_one_data.length
 
     table_length.times do |i|
-      player = package_player(table_one_data[i], table_two_data[i])
+      player = package_player(table_one_data[i], table_two_data[i], team_abbr)
       players.push(player)
     end
 
@@ -50,13 +50,13 @@ class EspnParser < ActiveRecord::Base
     table.css('.evenrow') + table.css('.oddrow')
   end
 
-  def package_player(table_one, table_two)
+  def package_player(table_one, table_two, team_abbr)
     one = table_one.css('td')
     two = table_two.css('td')
 
     name = one.css('a').text
 
-    player = { name: name, gp: one[1].text, gs: one[2].text,
+    player = { name: name, team: team_abbr, gp: one[1].text, gs: one[2].text,
                min: one[3].text, ppg: one[4].text, offr: one[5].text,
                defr: one[6].text, rpg: one[7].text, apg: one[8].text,
                spg: one[9].text, bpg: one[10].text,

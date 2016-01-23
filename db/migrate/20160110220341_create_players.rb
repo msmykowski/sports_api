@@ -1,35 +1,36 @@
 class CreatePlayers < ActiveRecord::Migration
   def change
     create_table :players do |t|
+      t.string :team
       t.string :name
-      t.integer :gp
-      t.integer :gs
-      t.integer :min
-      t.integer :ppg
-      t.integer :offr
-      t.integer :defr
-      t.integer :rpg
-      t.integer :apg
-      t.integer :spg
-      t.integer :bpg
-      t.integer :tpg
-      t.integer :fpg
-      t.integer :ato
-      t.integer :per
-      t.integer :fgm
-      t.integer :fga
-      t.integer :fg
-      t.integer :thpm
-      t.integer :thpa
-      t.integer :thp
-      t.integer :ftm
-      t.integer :fta
-      t.integer :ft
-      t.integer :tpm
-      t.integer :tpa
-      t.integer :tp
-      t.integer :pps
-      t.integer :afg
+      t.string :gp
+      t.string :gs
+      t.string :min
+      t.string :ppg
+      t.string :offr
+      t.string :defr
+      t.string :rpg
+      t.string :apg
+      t.string :spg
+      t.string :bpg
+      t.string :tpg
+      t.string :fpg
+      t.string :ato
+      t.string :per
+      t.string :fgm
+      t.string :fga
+      t.string :fg
+      t.string :thpm
+      t.string :thpa
+      t.string :thp
+      t.string :ftm
+      t.string :fta
+      t.string :ft
+      t.string :tpm
+      t.string :tpa
+      t.string :tp
+      t.string :pps
+      t.string :afg
 
       t.timestamps null: false
     end
