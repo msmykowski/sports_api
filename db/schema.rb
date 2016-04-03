@@ -11,64 +11,66 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_160_110_220_341) do
+ActiveRecord::Schema.define(version: 20160110220341) do
+
   # These are extensions that must be enabled in order to support this database
-  enable_extension 'plpgsql'
+  enable_extension "plpgsql"
 
-  create_table 'espn_clients', force: :cascade do |t|
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "espn_clients", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'espn_instantiators', force: :cascade do |t|
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "espn_instantiators", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'espn_parsers', force: :cascade do |t|
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "espn_parsers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'players', force: :cascade do |t|
-    t.string 'team'
-    t.string 'name'
-    t.string 'gp'
-    t.string 'gs'
-    t.string 'min'
-    t.string 'ppg'
-    t.string 'offr'
-    t.string 'defr'
-    t.string 'rpg'
-    t.string 'apg'
-    t.string 'spg'
-    t.string 'bpg'
-    t.string 'tpg'
-    t.string 'fpg'
-    t.string 'ato'
-    t.string 'per'
-    t.string 'fgm'
-    t.string 'fga'
-    t.string 'fg'
-    t.string 'thpm'
-    t.string 'thpa'
-    t.string 'thp'
-    t.string 'ftm'
-    t.string 'fta'
-    t.string 'ft'
-    t.string 'tpm'
-    t.string 'tpa'
-    t.string 'tp'
-    t.string 'pps'
-    t.string 'afg'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "players", force: :cascade do |t|
+    t.string   "team"
+    t.string   "name"
+    t.float    "gp"
+    t.float    "gs"
+    t.float    "min"
+    t.float    "ppg"
+    t.float    "offr"
+    t.float    "defr"
+    t.float    "rpg"
+    t.float    "apg"
+    t.float    "spg"
+    t.float    "bpg"
+    t.float    "tpg"
+    t.float    "fpg"
+    t.float    "ato"
+    t.float    "per"
+    t.float    "fgm"
+    t.float    "fga"
+    t.float    "fg"
+    t.float    "thpm"
+    t.float    "thpa"
+    t.float    "thp"
+    t.float    "ftm"
+    t.float    "fta"
+    t.float    "ft"
+    t.float    "tpm"
+    t.float    "tpa"
+    t.float    "tp"
+    t.float    "pps"
+    t.float    "afg"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'teams', force: :cascade do |t|
-    t.string 'name'
-    t.string 'abbr'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "teams", force: :cascade do |t|
+    t.string   "name"
+    t.string   "abbr"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
+
 end
